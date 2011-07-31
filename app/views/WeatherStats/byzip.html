@@ -1,0 +1,29 @@
+#{extends 'main.html' /}
+#{set title:'By Zip' /}
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>High</th>
+        <th>Low</th>
+        <th>Wind Speed</th>
+        <th>Wind Direction</th>
+        <th>Icon</th>
+        <th>Description</th>
+        <th>Precipitation</th>
+    </tr>
+
+#{list items:weatherList, as:'weather'}
+    <tr>
+	    <td>${weather.date}</td>
+	    <td>${weather.highTemp}</td>
+	    <td>${weather.lowTemp}</td>
+	    <td>${weather.windSpeed}</td>
+	    <td>${weather.windDirectionDegree}</td>
+	    <td><img src="${weather.weatherSymbolUrl}" alt="${weather.weatherDescription}" /></td>
+	    <td>${weather.weatherDescription}</td>
+	    <td>${weather.precipitation}</td>
+    </tr>
+#{/list}
+
+</table>

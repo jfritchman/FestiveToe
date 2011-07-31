@@ -1,0 +1,7 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<form id="zipform" action="/WeatherStats/byzip" method="get">
+    <label for="zipcode">Zip Code</label>
+    <input type="text" name="zipcode" id="zipcode" maxlength="5" size="5" />
+</form>
